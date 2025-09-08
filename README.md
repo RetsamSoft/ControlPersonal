@@ -1,59 +1,98 @@
-# ControlPersonal
+# Sistema de Control de Personal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+Una aplicación web desarrollada en Angular para el control de entrada y salida de empleados.
 
-## Development server
+## Características
 
-To start a local development server, run:
+- ✅ **Marcación de Asistencia**: Los empleados pueden marcar su entrada y salida
+- ✅ **Reloj en Tiempo Real**: Muestra la fecha y hora actual
+- ✅ **Historial de Marcaciones**: Visualización de todas las marcaciones realizadas
+- ✅ **Filtros**: Filtrar el historial por tipo (entrada/salida)
+- ✅ **Diseño Responsivo**: Adaptable a dispositivos móviles y desktop
+- ✅ **Interfaz Intuitiva**: Fácil de usar para todos los empleados
 
+## Uso de la Aplicación
+
+### Marcación de Asistencia
+
+1. **Acceder a la sección "Marcación"**
+2. **Ingresar el número de empleado** (ejemplos disponibles: 001, 002, 003)
+3. **Presionar "Marcar Asistencia"** o **Enter**
+4. El sistema determinará automáticamente si es entrada o salida
+5. Se mostrará una confirmación con la hora de marcación
+
+### Historial de Marcaciones
+
+1. **Acceder a la sección "Historial"**
+2. **Ver todas las marcaciones** realizadas por orden cronológico
+3. **Filtrar por tipo**: Todos, Solo Entradas, Solo Salidas
+4. **Información mostrada**: Empleado, Tipo, Fecha y Hora
+
+## Empleados de Prueba
+
+La aplicación incluye empleados de prueba para demostración:
+
+| Número | Nombre | Apellido |
+|--------|--------|----------|
+| 001    | Juan   | Pérez    |
+| 002    | María  | García   |
+| 003    | Carlos | López    |
+
+## Instalación y Desarrollo
+
+### Prerrequisitos
+- Node.js (versión 18 o superior)
+- npm o yarn
+
+### Comandos de Desarrollo
 ```bash
-ng serve
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm start
+
+# Compilar para producción
+npm run build
+
+# Ejecutar tests
+npm test
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tecnologías Utilizadas
 
-## Code scaffolding
+- **Angular 20** - Framework principal
+- **TypeScript** - Lenguaje de programación
+- **Signals** - Gestión de estado reactivo
+- **CSS3** - Estilos y animaciones
+- **Responsive Design** - Adaptabilidad móvil
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Estructura del Proyecto
 
-```bash
-ng generate component component-name
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── marcacion.component.ts    # Componente de marcación
+│   │   └── historial.component.ts    # Componente de historial
+│   ├── models/
+│   │   └── registro.model.ts         # Modelos de datos
+│   ├── services/
+│   │   └── control-personal.service.ts # Lógica de negocio
+│   ├── app.component.*               # Componente principal
+│   └── app.routes.ts                 # Configuración de rutas
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Funcionalidades Futuras
 
-```bash
-ng generate --help
-```
+- 🔄 Persistencia de datos en localStorage/base de datos
+- 👥 Gestión de empleados (altas, bajas, modificaciones)
+- 📊 Reportes y estadísticas
+- 🔐 Sistema de autenticación
+- 📧 Notificaciones por email
+- 📱 Aplicación móvil nativa
+- 🏢 Gestión de múltiples sucursales
 
-## Building
+---
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desarrollado con ❤️ para facilitar el control de personal en empresas.
